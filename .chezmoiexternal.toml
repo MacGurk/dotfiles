@@ -1,0 +1,13 @@
+[".oh-my-zsh"]
+    type = "git-repo"
+    url = "https://github.com/ohmyzsh/ohmyzsh.git"
+
+[".oh-my-zsh/custom/plugins/kubectx"]
+    type = "git-repo"
+    url = "git@github.com:unixorn/kubectx-zshplugin.git"
+    clone-args = ["--depth=1"]
+
+[".oh-my-zsh/custom/themes/powerlevel10k"]
+    type = "git-repo"
+    url = "https://github.com/romkatv/powerlevel10k.git"
+    clone-args = ["--depth=1"]

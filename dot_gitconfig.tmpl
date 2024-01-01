@@ -1,0 +1,7 @@
+[user]
+    name = {{ .nickname }}
+    email = {{ .personalEmail }}
+[includeif "gitdir{{ .chezmoi.pathListSeparator }}~{{ .chezmoi.pathSeparator }}dg{{ .chezmoi.pathSeparator }}"]
+    path = ~{{ .chezmoi.pathSeparator }}.gitconfig-work
+[core]
+	autocrlf = input
