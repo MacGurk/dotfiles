@@ -1,0 +1,124 @@
+* {
+    border: none;
+    border-radius: 0px;
+    font-size: 18px;
+    font-family: MesloLGL Nerd Font Mono;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(30, 39, 46, 0.5);
+    border-bottom: 1px solid #1E1E2E;
+    color: #f4d9e1;
+}
+
+#custom-logo {
+    background: #1E1E2E;
+    margin: 0px;
+    padding: 0px 20px 0px 13px;
+    border-radius: 0px 8px 24px 0px;
+    font-size: 20px;
+}
+
+#workspaces {
+    background: #1E1E2E;
+    margin: 5px;
+    padding: 0px 5px 0px 5px;
+    border-radius: 16px;
+    border: solid 0px #f4d9e1;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#workspaces button {
+    color: #928374;
+    padding: 0px 5px;
+    border-radius: 16px;
+}
+
+#workspaces button.current_output.focused {
+    color: #89b4fa;
+    background-color: transparent;
+    border-radius: 16px;
+}
+
+#workspaces button.urgent {
+    color: #f38ba8;
+}
+
+#workspaces button.visible {
+    color: #cdd6f4;
+}
+
+#workspaces button:hover {
+    background-color: #F5E0DC;
+    color: black;
+    border-radius: 16px;
+}
+
+#clock {
+    color: #F5E0DC;
+    background-color: #1E1E2E;
+    border-radius: 24px;
+    border: solid #EBA0AC 2px;
+    margin: 2px;
+    padding: 0px 10px;
+    font-weight: bold;
+}
+
+#backlight,
+#memory,
+#temperature,
+#battery,
+#network,
+#tray,
+#custom-player {
+    border-radius: 4px;
+}
+
+#pulseaudio,
+#backlight,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#network,
+#tray,
+#custom-player,
+#custom-weather {
+    color: #F5E0DC;
+    background-color: #1E1E2E;
+    margin: 5px 1px;
+    padding: 0px 10px;
+}
+
+#custom-weather {
+    margin-right: 5px;
+    border-radius: 4px 24px 24px 4px;
+}
+
+#custom-player {
+    border-radius: 4px 24px 24px 4px;
+}
+
+#cpu {
+    border-radius: 24px 4px 4px 24px;
+}
+
+#pulseaudio {
+     border-radius: 24px 4px 4px 24px;
+ }
+
+#custom-notification {
+    background: #1E1E2E;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    border-radius: 8px 0px 0px 24px;
+    font-size: 20px;
+}
+
+#custom-notification button:hover {
+    background-color: #F5E0DC;
+    color: black;
+    border-radius: 16px;
+}
