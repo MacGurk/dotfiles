@@ -1,0 +1,18 @@
+alias k='kubectl'
+alias kc='kubectx'
+alias kn='kubens'
+
+alias lg='lazygit'
+
+alias vim='nvim'
+alias vi='nvim'
+alias v='nvim'
+
+alias dgp='cd ~/dg/$(ls ~/dg | fzf)'
+alias dgc='~/.local/scripts/dgclone.sh'
+
+alias mcp='cd ~/development/$(ls ~/development | fzf)'
+
+alias cz='chezmoi'
+
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"

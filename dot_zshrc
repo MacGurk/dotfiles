@@ -81,7 +81,8 @@ source /etc/bash_completion.d/azure-cli
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Aliases are set in $ZSH_CUSTOM/aliases.zsh
+# Aliases are set in $HOME/aliases.zsh
+source $HOME/.aliases
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
