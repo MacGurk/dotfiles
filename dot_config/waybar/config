@@ -111,7 +111,8 @@
         "on-click": "pavucontrol"
     },
     "custom/logo": {
-        "format": ""
+        "format": "",
+        "on-click": "rofi -terminal kitty -show combi -combi-modes drun#run -modes combi -show-icons -icon-theme Papirus-Dark"
     },
     "custom/notification": {
         "tooltip": false,
