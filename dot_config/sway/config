@@ -64,6 +64,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi -show-icons -
     input type:keyboard {
         xkb_layout us
         xkb_variant altgr-intl
+        xkb_options caps:escape_shifted_capslock
     }
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
