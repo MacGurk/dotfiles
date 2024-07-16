@@ -144,9 +144,10 @@
         "return-type": "json",
         "interval": 2,
         "max-length": 40,
-        "exec": "playerctl -a metadata -p spotify --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}'",
+        "exec": "playerctl metadata -p spotify --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}'",
+        "on-click": "playerctl -p spotify play-pause",
         "format-icons": {
-            "Playing": "",
+            "Playing": "󰝚",
             "Paused": " "
         }
     }
