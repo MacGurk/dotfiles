@@ -231,8 +231,13 @@ bindsym $mod+r mode "resize"
 ### Workspace assignements
 #
 
-assign [class="Firefox"] 2
+assign [class="teams-for-linux"] 4
+assign [class="WebCord"] 4
 assign [class="[Ss]potify"] 5
+
+for_window [app_id="org.gnome.Calculator"] {
+    floating enable
+}
 
 ### Float settings
 #
