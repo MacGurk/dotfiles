@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 
 -- open file explorer
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeToggle)
 
 -- move visual lines up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
