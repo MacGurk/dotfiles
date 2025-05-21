@@ -110,11 +110,25 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 # Fuzzy find for cli
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -x "$(command -v fzf)" ] && source <(fzf --zsh)
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+function open () {
+    nohup xdg-open "$*" > /dev/null 2>&1 &
+    disown
+}
+
+{{ if findExecutable "bun" (list ".bun/bin") }}
+# bun completions
+[ -s "/home/omorf/.bun/_bun" ] && source "/home/omorf/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+{{ end }}
 
