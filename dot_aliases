@@ -10,9 +10,14 @@ alias v='nvim'
 
 alias dgp='cd ~/dg/$(ls ~/dg | fzf)'
 alias dgc='~/.local/scripts/dgclone.sh'
+alias dgvpn='~/.local/scripts/dgvpn.sh'
 
 alias mcp='cd ~/development/$(ls ~/development | fzf)'
 
-alias cz='chezmoi'
+alias cm='chezmoi'
 
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
+alias l='exa --long --header --git'
+alias la='exa --long --header --git --all'
+
