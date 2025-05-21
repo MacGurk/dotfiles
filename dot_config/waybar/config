@@ -40,11 +40,18 @@
                 "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
                 "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
             }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
         }
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": true
     },
     "memory": {
         "format": "{}% "
@@ -74,7 +81,8 @@
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{power} W"
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -140,14 +148,16 @@
         "interval": 800
     },
     "custom/player": {
-        "format": "{icon} {}",
+        "format": "{icon} {0}",
+        "escape": true,
         "return-type": "json",
         "interval": 2,
         "max-length": 40,
         "exec": "playerctl metadata -p spotify --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}'",
+        "exec-if": "pgrep spotify",
         "on-click": "playerctl -p spotify play-pause",
         "format-icons": {
-            "Playing": "󰝚",
+            "Playing": "♪",
             "Paused": " "
         }
     }

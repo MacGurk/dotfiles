@@ -39,14 +39,20 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi -show-icons -
 # output "Ancor Communications Inc ROG PG279Q #ASM2rLMXJiXd" resolution 2560x1440@120Hz position 2560,0
 # output "Dell Inc. DELL U2722D 9DFGWN3" resolution 2560x1440 position 0,0
 
+# bind screen lid switch to disable/enable built-in screen
+    bindswitch --locked --reload {
+        lid:on output eDP-1 disable
+        lid:off output eDP-1 enable
+    }
+
 ### Idle configuration
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
+#    exec swayidle -w \
+#             timeout 300 'swaylock -f -c 000000' \
+#             timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#             before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -239,6 +245,9 @@ for_window [app_id="org.gnome.Calculator"] {
     floating enable
 }
 
+# position flameshot correctly on multi monitor setup
+for_window [app_id="flameshot"] border pixel 0, floating enabled, fullscreen disable, move absolute position 0 0
+
 ### Float settings
 #
 # Pritunl doesnt work somehow yet
@@ -260,6 +269,17 @@ exec swaync
 
 # kanshi manages output configurations
 exec_always "pkill kanshi; kanshi"
+
+
+### Fixes
+#
+
+# Fix issue with long starting time of GTK+ applications
+# https://github.com/swaywm/sway/issues/5732
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
 
 ### Additional configs
 #
