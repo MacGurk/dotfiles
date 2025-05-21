@@ -5,3 +5,27 @@
     path = ~{{ .chezmoi.pathSeparator }}.gitconfig-work
 [core]
 	autocrlf = input
+    longpaths = true
+[pull]
+    rebase = true
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+[push]
+    autoSetupRemote = true
+    followTags = true
+[tag]
+    sort = version:refname
+[fetch]
+    pruneTags = true
+    prune = true
+    all = true
+[help]
+    autocorrect = prompt
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    rename = true
