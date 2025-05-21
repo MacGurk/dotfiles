@@ -25,7 +25,6 @@ return require('packer').startup(function(use)
     use('ThePrimeagen/harpoon')
     use('ThePrimeagen/vim-be-good')
     use('mbbill/undotree')
-    use('github/copilot.vim')
 
     use({
         "kdheepak/lazygit.nvim",
